@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 
-import style from './feedBack.module.css';
-
 import { FeedbackOptions } from "./FeedBackBtn/FeedbackOptions";
 import { Notification } from "./Notification/Notification";
 import { Section } from "./Sections/Section";
@@ -28,7 +26,7 @@ export class App extends Component {
     }
 render() {
     const options = Object.keys(this.state);
-        return<div className={style.container}>
+        return<>
         <Section title="Please leave feedback">
                 <FeedbackOptions
             options={options}
@@ -45,6 +43,6 @@ render() {
                 positivePercentage={this.countPositiveFeedbackPercentage()}/>
                     </div>)}
             </Section>
-                </div>
+                </>
 }
 }
